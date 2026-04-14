@@ -4,34 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập Hệ Thống</title>
+    <style>
+        /* Reset CSS cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Card đăng nhập */
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        /* Nhóm Input */
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #764ba2;
+        }
+
+        /* Nút bấm */
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #764ba2;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #5a3782;
+        }
+
+        /* Link bổ sung */
+        .extra-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .extra-links a {
+            color: #764ba2;
+            text-decoration: none;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<div class="login-container">
-    <h2>Chào mừng trở lại</h2>
-    <form>
-        <div class="form-group">
-            <label for="email">Email hoặc Tên đăng nhập</label>
-            <input type="text" id="email" placeholder="Nhập email của bạn..." required>
-        </div>
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+        <form action="#">
+            <div class="input-group">
+                <input type="text" placeholder="Tên đăng nhập hoặc Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Mật khẩu" required>
+            </div>
+            <button type="submit" class="btn-login">VÀO HỆ THỐNG</button>
+        </form>
         
-        <div class="form-group">
-            <label for="password">Mật khẩu</label>
-            <input type="password" id="password" placeholder="••••••••" required>
-        </div>
-
-        <button type="submit" class="btn-login">Đăng Nhập</button>
-
-        <div class="options">
-            <label><input type="checkbox"> Ghi nhớ</label>
+        <div class="extra-links">
             <a href="#">Quên mật khẩu?</a>
+            <a href="#">Tạo tài khoản mới</a>
         </div>
-    </form>
-
-    <div class="register-link">
-        Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
     </div>
-</div>
 
 </body>
 </html>
