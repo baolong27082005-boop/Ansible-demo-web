@@ -1,0 +1,27 @@
+- hosts: web
+  become: true
+
+  tasks:
+    - name: Install nginx
+      package:
+        name: nginx
+        state: present
+
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+
+    - name: Remove old web folder
+      file:
+        path: /var/www/html
+        state: absent
+
+    - name: Clone repo từ GitHub
+      git:
+        repo: https://github.com/baolong27082005-boop/DemoAnsible.git
+        dest: /var/www/html
+    - name: Render template
+      template:
+        src: index.html.j2
+        dest: /var/www/html/index.html

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập Hiện Đại</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+        }
+
+        /* Hiệu ứng kính mờ (Glassmorphism) */
+        .login-container {
+            position: relative;
+            width: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #fff;
+            color: #2575fc;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2575fc;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .options {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .options a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .options a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>ĐĂNG NHẬP</h2>
+        <form action="#">
+            <div class="input-group">
+                <input type="text" placeholder="Tên đăng nhập" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Mật khẩu" required>
+            </div>
+            <button type="submit">Xác Nhận</button>
+        </form>
+        <div class="options">
+            <a href="#">Quên mật khẩu?</a>
+            <a href="#">Đăng ký ngay</a>
+        </div>
+    </div>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<body>
+    <h1>🚀 Ansible Dynamic Web</h1>
+    <p>Hostname: {{ ansible_hostname }}</p>
+    <p>IP Address: {{ ansible_default_ipv4.address }}</p>
+</body>
+</html>
